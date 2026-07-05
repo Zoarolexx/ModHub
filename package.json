@@ -1,0 +1,9 @@
+{
+  "name": "modhub-vercel",
+  "version": "1.0.0",
+  "description": "ModHub - Tempat download game dan aplikasi mod",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "cheerio": "^1.0.0-rc.12"
+  }
+}

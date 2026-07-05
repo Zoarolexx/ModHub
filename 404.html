@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#1a73e8">
+    <meta name="description" content="ModHub - Tempat download game dan aplikasi mod terpercaya">
+    <title>ModHub - Download Game & Aplikasi Mod</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading">
+        <div class="loader">
+            <div class="loader-circle"></div>
+        </div>
+        <p>Memuat ModHub...</p>
+    </div>
+
+    <!-- Main Content -->
+    <div id="app" style="display:none;">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo" onclick="navigateTo('home')">
+                    <img src="/logo.png" alt="ModHub" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+                    <i class="fas fa-gamepad logo-fallback" style="display:none;"></i>
+                    <span>ModHub</span>
+                </div>
+                <div class="header-actions">
+                    <button id="themeToggle" class="icon-btn" aria-label="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button id="searchToggle" class="icon-btn" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Search Bar -->
+        <div id="searchBar" class="search-bar hidden">
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Cari game atau aplikasi mod..." />
+                <button id="searchBtn" class="search-btn">Cari</button>
+            </div>
+        </div>
+
+        <!-- PWA Install Banner -->
+        <div id="installBanner" class="install-banner hidden">
+            <div class="install-banner-content">
+                <i class="fas fa-download"></i>
+                <div class="install-text">
+                    <strong>Install ModHub</strong>
+                    <span>Akses lebih cepat & offline</span>
+                </div>
+                <button id="installBtn" class="install-btn">Install</button>
+                <button id="closeInstallBanner" class="close-banner">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <main id="mainContent" class="main-content">
+            <div id="contentContainer"></div>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav" id="bottomNav">
+            <div class="nav-item active" data-page="home" onclick="navigateTo('home')">
+                <i class="fas fa-home"></i>
+                <span>Beranda</span>
+            </div>
+            <div class="nav-item" data-page="search" onclick="navigateTo('search')">
+                <i class="fas fa-search"></i>
+                <span>Cari</span>
+            </div>
+            <div class="nav-item" data-page="favorites" onclick="navigateTo('favorites')">
+                <i class="fas fa-heart"></i>
+                <span>Favorit</span>
+            </div>
+            <div class="nav-item" data-page="settings" onclick="navigateTo('settings')">
+                <i class="fas fa-cog"></i>
+                <span>Pengaturan</span>
+            </div>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

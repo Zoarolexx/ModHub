@@ -1,0 +1,26 @@
+{
+  "name": "ModHub",
+  "short_name": "ModHub",
+  "description": "Tempat download game dan aplikasi mod terpercaya",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f0f4f8",
+  "theme_color": "#1a73e8",
+  "categories": ["games", "entertainment"],
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/screenshot1.png",
+      "sizes": "1080x1920",
+      "type": "image/png"
+    }
+  ]
+}
